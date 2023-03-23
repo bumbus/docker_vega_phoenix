@@ -7,6 +7,24 @@ To start your Phoenix server:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
+
+Build and run in docker
+
+```
+docker build -t docker_vega_phoenix .
+docker run -d -p 4000:4000 docker_vega_phoenix
+```
+Visit `localhost:4000` >> Internal Server Error
+
+```
+# Find process
+docker ps
+docker logs <PID>
+```
+
+And see the error.
+
+
 Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
 
 ## Learn more
