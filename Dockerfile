@@ -77,14 +77,14 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
-RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
+RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash - && \
   apt-get install -y nodejs
 
 RUN node --version
 RUN npm install -g vega vega-lite canvas
 
-# ENV NODE_PATH /usr/bin/node
-# ENV NPM_PATH /usr/bin/npm
+# ENV NODE_PATH="/usr/bin/node"
+# ENV NPM_PATH="/usr/bin/npm"
 
 WORKDIR "/app"
 # RUN chown nobody /app
